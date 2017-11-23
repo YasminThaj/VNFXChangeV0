@@ -1,0 +1,14 @@
+# virsh define /root/images/vyatta.xml
+# virsh list --all
+
+# virsh start vyatta-1
+# virsh console vyatta-1
+
+$ show interfaces
+$ configure
+# set interface dataplane dp0s3 address 
+# set protocols static route 0.0.0.0/0 next-hop 10.53.173.254
+# commit
+# exit
+$ show interfaces
+$ ping 10.53.173.254
